@@ -1,0 +1,25 @@
+using System;
+namespace ConsoleApp
+{
+    class Program
+    {
+        public static string ReverseString(string s)
+        {
+            char[] arr = s.ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr);
+        }
+        
+        static void Main(string[] args)
+        {
+            int result = 0;
+            for (int x = 900; x <= 1000; x++)
+                for (int y = 900; y<= 1000; y++)
+                {
+                    result = x * y;
+                    if (result.ToString() == ReverseString(result.ToString()))
+                        Console.WriteLine(result);
+                }
+        }
+    }
+}
