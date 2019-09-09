@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static int GetResult(int index)
+        {
+            Queue<int> primeNum = new Queue<int>();
+
+            int count = 0;
+            for (int i = 2; ; i++)
+            {
+                if (Current(i, primeNum))
+                {
+                    if (index == count)
+                        return i;
+                    else
+                    {
+                        primeNum.Enqueue(i);
+                        count++;
+                    }
+                }
+            }
+        }
+
+        static bool Current(int number, IEnumerable<int> current)
+        {
+            if (number == 1)
+                return false;
+
+            foreach (int n in current)
+                if (number % n == 0)
+                    return false;
+            return true;
+        }
+
+        static void Main(string[] args)
+        {
+            int result = GetResult(10000);
+            Console.WriteLine(result);
+        }
+    }
+}
