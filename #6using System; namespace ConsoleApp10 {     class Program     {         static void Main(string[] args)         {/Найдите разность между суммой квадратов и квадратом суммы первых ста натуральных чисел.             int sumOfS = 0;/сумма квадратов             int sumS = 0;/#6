@@ -1,0 +1,21 @@
+using System;
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sumOfS = 0;
+            int sumS = 0;
+            int result = 0;
+           for (int x = 0; x <= 100; x++)
+            {
+                sumOfS = sumOfS + x * x;
+                sumS = (sumS + x);
+            }
+            sumS = sumS * sumS;
+            result = sumS - sumOfS;
+            Console.WriteLine(result);
+        }
+    }
+}
