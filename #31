@@ -1,0 +1,19 @@
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] options = new int[purpose + 1];
+            options[0] = 1;
+            int purpose = 200;
+            for (int i = 0; i < coin.Length; i++)
+            {
+                for (int j = coin[i]; j <= purpose; j++)
+                {
+                    options[j] = options[j] + options[j - coin[i]];
+                }
+            }
+        }
+    }
+}
