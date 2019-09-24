@@ -23,3 +23,11 @@ namespace ConsoleApp
         }
     }
 }
+
+//python
+elements = []
+for x in range(1, 999):
+    for y in range(1, 999):
+        if str(x*y) == str(x*y)[::-1]:
+            a.append(x*y)
+print(max(elements))
